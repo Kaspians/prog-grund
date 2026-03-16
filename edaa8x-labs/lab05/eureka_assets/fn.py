@@ -63,7 +63,7 @@ def delete():  # TODO: delete {n}item in eureka.txt
 
     for i in eureka_lines:
         append_file(file, i)
-    debug_add(f"re-added all items except the deleted one")
+    debug_add(f"del - re-added all items except the deleted line: {line}")
 
 
 def help():  # TODO: print from a file
