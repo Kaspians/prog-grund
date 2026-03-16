@@ -1,5 +1,4 @@
 #!/bin/python3
-# Never goon
 
 from eureka_assets import fn
 
@@ -25,3 +24,14 @@ def main():
 
 
 main()
+
+
+##########
+## KRAV ##
+##########
+#
+# - [x] Min 2 func()        - 11/2
+# - [x] Min 1 [list]        - 2/1 ? kanske way more
+# - [x] Interact with user  - 
+# - [x] Easy code to read and understand
+# - [x] keep it KISS stupid - 😘
