@@ -53,13 +53,13 @@ def delete():  # TODO: delete {n}item in eureka.txt
         for i in f:
             eureka_lines.append(i)
 
-    debug_add(f"del - eureka_lines list created")
+    debug_add(f"del - {eureka_lines} list created")
 
     del eureka_lines[line]
     debug_add(f"del - item {line} in eureka_lines deleted")
 
     write_file(file, "")
-    debug_add(f"del - rewrote/cleared eureka.txt")
+    debug_add("del - rewrote/cleared eureka.txt")
 
     for i in eureka_lines:
         append_file(file, i)
