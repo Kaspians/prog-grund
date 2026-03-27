@@ -5,3 +5,4 @@ what even is an Eureka?
 Hello world!
 THE PROGRAM F WORKS!! MY FIRST PROGRAM.PY WRITTEN IN PYTHON!!
 works from vscode?
+quick add, good addition
