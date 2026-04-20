@@ -1,3 +1,7 @@
+from sphinx.cmd.quickstart import boolean
+import string
+
+
 def file_path(file):
     path = (  # INFO: delar upp path och skapar lista av items mellan '/'(utan den sista item[-1]). sen join till en string med '/' imellan och append '/eureka.txt'
         '/'.join(__file__.split('/')[0:-1]) + f'/{file}'
