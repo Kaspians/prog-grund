@@ -39,7 +39,7 @@ class Frac:
         self.numer = int(a / GCD(a, b))
         self.denom = int(b / GCD(a, b))
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         # Upg3
         **Pro-Fortnite tip**:
@@ -50,7 +50,7 @@ class Frac:
         d = self.denom
         return f'{n}/{d}'
 
-    def add(self, other) -> 'Frac':
+    def add(self, other: 'Frac') -> 'Frac':
         """
         *Addify* `a+b`
 
@@ -68,7 +68,7 @@ class Frac:
         dem = b * d
         return Frac(num, dem)
 
-    def sub(self, other) -> 'Frac':
+    def sub(self, other: 'Frac') -> 'Frac':
         """
         *Subify*: `a-b`
 
@@ -86,7 +86,7 @@ class Frac:
         dem = b * d
         return Frac(num, dem)
 
-    def mul(self, other) -> 'Frac':
+    def mul(self, other: 'Frac') -> 'Frac':
         """
         *Multiply*: `a*b`
 
@@ -104,7 +104,7 @@ class Frac:
         dem = b * d
         return Frac(num, dem)
 
-    def div(self, other) -> 'Frac':
+    def div(self, other: 'Frac') -> 'Frac':
         """
         *Divify*: `a/b`
 
@@ -122,14 +122,14 @@ class Frac:
         dem = b * c
         return Frac(num, dem)
 
-    def __add__(term1, term2):
+    def __add__(term1: 'Frac', term2: 'Frac') -> 'Frac':
         return Frac.add(term1, term2)
 
-    def __sub__(term1, term2):
+    def __sub__(term1: 'Frac', term2: 'Frac') -> 'Frac':
         return Frac.sub(term1, term2)
 
-    def __mul__(prod1, prod2):
+    def __mul__(prod1: 'Frac', prod2: 'Frac') -> 'Frac':
         return Frac.mul(prod1, prod2)
 
-    def __truediv__(num, dem):
+    def __truediv__(num: 'Frac', dem: 'Frac') -> 'Frac':
         return Frac.div(num, dem)
