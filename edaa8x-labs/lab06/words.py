@@ -57,6 +57,11 @@ def count_all_except(words: list[str], stopwords: list[str]) -> dict[str, int]:
 
 
 def filter_hist(hist: dict[str, int], min_count: int) -> dict[str, int]:
+    """
+    Take a **dict** and integer **min_count**
+
+    Return a dict where all *keys* with a *value* < *min_count*
+    """
     newDic = {}
     for i in hist:
         if hist[i] > min_count:
@@ -65,6 +70,11 @@ def filter_hist(hist: dict[str, int], min_count: int) -> dict[str, int]:
 
 
 def sorted_hist(hist: dict[str, int]) -> list[tuple[int, str]]:
+    """
+    Take a **dict**.
+
+    Return a sorted version of *dict*.
+    """
     lt = []  # lt = [l]ist of [t]uple
     for word in hist:
         lt.append((hist[word], word))

@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
 
-from wx.lib.agw.buttonpanel import Separator
+from sys import stdout
 import words as fn
+
+
+def print2(t: tuple) -> None:
+    for i in t:
+        stdout.write(i + '\t')
+    stdout.write('\n')
+
+
+print2(('Lab06', 'Interactive session'))
 
 
 def main(filename: str, countOnlyFile: str, stopWordsFile: str, choice: int) -> None:
@@ -10,11 +19,7 @@ def main(filename: str, countOnlyFile: str, stopWordsFile: str, choice: int) -> 
     function, third is for count NOT function.
 
     With input() select the function you want to do.
-    * 0. Print(all words)
-    * 1. Print(first/last 100 cleaned words)
-    * 2. Print(Count only provinces)
-    * 3. Print(Top 10 of all except stopwords)
-    * 4. Print(Filter away words rarer than {n} appearances)
+    * See `ask()`
     """
     words = fn.read_words(filename)
     provinces = fn.read_words(countOnlyFile)
@@ -60,7 +65,15 @@ stopWordsFile = 'undantagsord.txt'
 
 
 def ask():
-    choice = input("""
+    """
+    With input() select the function you want to do.
+    * 0. Print(all words)
+    * 1. Print(first/last 100 cleaned words)
+    * 2. Print(Count only provinces)
+    * 3. Print(Top 10 of all except stopwords)
+    * 4. Print(Filter away words rarer than `n` appearances)
+    """
+    stdout.write("""
     Choose the option you want {int}:
     * 0. Print(all words)
     * 1. Print(first/last 100 cleaned words)
@@ -68,14 +81,14 @@ def ask():
     * 3. Print(Top 10 of all except stopwords)
     * 4. Print(Filter away words rarer than {n} appearances)
     """)
-    return choice
+    return input('Choice: ')
 
 
 while True:
-    choice = int(ask())
+    choice = ask()
     if choice == '':
         break
-    elif choice > 4 or choice < 0:
-        print('0<=Int<5, thanks')
+    elif int(choice) > 4 or int(choice) < 0:
+        stdout.write('0<=Int<5, thanks\n')
     else:
-        main(filename, countOnlyFile, stopWordsFile, choice)
+        main(filename, countOnlyFile, stopWordsFile, int(choice))
