@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from board import TicTacToeBoard
+from window_tk import TicTacToeApp
 
 # NOTE: [x] upg6 - __name__ == __main__
 if __name__ == '__main__':
@@ -18,6 +19,7 @@ if __name__ == '__main__':
         t = TicTacToeBoard()
         t.print_board(False)
         turn = 0
+        tk = TicTacToeApp(t)
 
         while not t.is_full():
             if turn % 2 == 0:

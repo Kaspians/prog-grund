@@ -14,17 +14,10 @@ def GCD(a: int, b: int) -> int:
     return abs(a)
 
 
-# def numerDenom(p1: int, p2: int) -> tuple[int, int]:
-#     """
-#     Return a tuple of two integers,
-#     * t[0] = *täljaren*
-#     * t[1] = *nämnaren*
-#     """
-#     return (int(p1 / GCD(p1, p2)), int(p2 / GCD(p1, p2)))
-
-
 class Frac:
-    """Straight up *Frac*s"""
+    """
+    Straight up *Frac*s
+    """
 
     def __init__(self, a: int, b: int):
         """
