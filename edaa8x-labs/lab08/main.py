@@ -23,6 +23,8 @@ if __name__ == '__main__':
         gui_or_cli = input('<g>ui or <c>li? ')
         if gui_or_cli == 'g':
             tk = TicTacToeApp(t)
+            while tk:
+                input()  # why was this required for running GUI ??
         elif gui_or_cli == 'c':
             while not t.is_full():
                 if turn % 2 == 0:
