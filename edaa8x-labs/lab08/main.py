@@ -43,12 +43,13 @@ if __name__ == '__main__':
                 if len(ask) == 2:
                     row, col = ask[0], ask[1]
                     if row in ('0', '1', '2') and col in ('0', '1', '2'):
-                        t.place(marker, int(row), int(col))
+                        wasPlaced = t.place(marker, int(row), int(col))
                         t.print_board(False)
                         if t.is_winner(marker):
                             print(marker, 'WIN')
                             break
-                        turn += 1
+                        if wasPlaced:
+                            turn += 1
                     else:
                         print('\n    0 <= int <= 2')
                 elif ask == 'q':

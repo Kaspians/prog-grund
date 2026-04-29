@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-# NOTE: [x] upg1 - skapa fil
 
-# NOTE: [x] upg2 - Skapa class, constructor ...
 class TicTacToeBoard:
     """
     Class about the logic of the game.
